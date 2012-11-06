@@ -2,3 +2,5 @@ Tests
 
 ISSUE: Absolutely enforce proper format for string() -> dec() ?
 	(as it is, passing something like "12.-12" would work)
+
+ISSUE: Is the attribution in README.md sufficient? Do we need to include the full license? How?
