@@ -1,0 +1,5 @@
+{application, dec,
+  [{description, "Decimal datatype suitable for money values"},
+   {vsn, "0.1.0"},
+   {modules, []}
+   ]}.
