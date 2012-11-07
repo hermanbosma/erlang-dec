@@ -42,9 +42,7 @@ make(X) when is_list(X) ->
             {N, -MinE}
     end;
 make(X) when is_binary(X) ->
-    make(binary_to_list(X));
-make(X) when is_float(X) ->
-    make(float_to_list(X)).
+    make(binary_to_list(X)).
 
 show(X) ->
     {N, E} = reduce(X),
