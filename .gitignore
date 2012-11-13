@@ -2,3 +2,4 @@
 *.app
 /.eunit
 /ebin
+.*.swp
