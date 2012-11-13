@@ -62,8 +62,8 @@ show(X) ->
 
 reduce(X) ->
     {N, E} = make(X),
-    case N rem 10 of
-        0 ->
+    case {N, N rem 10} of
+        {NonZero, 0} when NonZero =/= 0 ->
             reduce({N div 10, E + 1});
         _ ->
             {N, E}
