@@ -31,7 +31,7 @@ make(X) when is_list(X) ->
     case lists:splitwith(fun(C) -> C =/= $. end, X) of
         {Whole, []} ->
             {list_to_integer2(Whole), 0};
-        {Whole, [$. | Frac]} ->
+        {Whole, [$., Digit | Frac]} when Digit >= $0 andalso Digit =< $9 ->
             MinE = length(Frac),
             N = list_to_integer2(Whole) * intpow(10, MinE) + case Whole of
                 [$- | _] ->
